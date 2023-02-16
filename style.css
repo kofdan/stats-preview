@@ -1,0 +1,129 @@
+:root{
+    /* (main background) */
+--very-dark-blue: hsl(233, 47%, 7%);
+/* (card background) */
+--dark-desaturated-blue: hsl(244, 38%, 16%);
+/* (accent) */
+--soft-violet: hsl(277, 64%, 61%);
+
+/* ### Neutral */
+/*  (main heading, stats) */
+--white: hsl(0, 0%, 100%);
+/* (main paragraph) */
+--slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+/* (stat headings) */
+--slightly-midle-transparent-white : hsla(0, 0%, 100%, 0.6);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,
+body{
+    font-size: 15px;
+    font-family: sans-serif;
+    background-color: var(--very-dark-blue);
+    color: wheat;
+    height: 100%;
+}
+ul,li{
+    list-style: none;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main   {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+}
+.card{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    max-width: 800px;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.card__left-side{
+    padding: 40px;
+    width: 50%;
+    background-color: var(--dark-desaturated-blue);
+}
+
+.card__title{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.card__desc{
+    padding: 30px 20px 50px 0;
+    color: var(--slightly-transparent-white);
+    font-size: 12px;
+}
+
+.stats-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+
+.card__right-side{
+    width: 50%;
+    background-size: cover;
+    z-index: 2;
+    opacity: 0.6;
+    position: relative;
+}
+
+
+.card__right-side::before{
+    position: absolute;
+    background-color: var(--soft-violet);
+    content: '';
+    opacity: 0.5;
+    filter: brightness(40%) saturate(500%);
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+
+}
+
+.card__title{
+    color: var(--white);
+}
+
+#decor{
+    color: var(--soft-violet);
+}
+
+
+.stats-list{
+    padding-right: 50px;
+}
+.stats-list__title{
+    color: var(--white);
+    padding-bottom: 15px;
+    text-transform: uppercase;
+}
+
+
+.stats-list__desc{
+    color: var(--slightly-midle-transparent-white);
+    text-transform: uppercase;
+    font-size: 12px;
+}
